@@ -14,7 +14,7 @@ class CUtilisateur {
         $this->pseudo = $row['pseudo'];
         $this->role = $row['role'];
         $this->statut = $row['statut'];
-        $this->permissions = json_decode($row['permissions'], true);
+        $this->permissions = json_decode($row['permissions'] ??  [], true);
         $this->ban_expire = $row['ban_expire'];
         $this->id_equipe = $row['id_equipe'];
     }
